@@ -12,8 +12,6 @@ const elements = {
 
 const { selectEl, textMarkEl, loaderEl, errorEl } = elements;
 
-loaderEl.classList.replace('loader', 'is-hidden');
-errorEl.classList.add('is-hidden');
 textMarkEl.classList.add('is-hidden');
 
 selectEl.addEventListener('change', createMarkUp);
@@ -40,9 +38,7 @@ function createMarkUp(event) {
   loaderEl.classList.replace('is-hidden', 'loader');
   selectEl.classList.add('is-hidden');
   textMarkEl.classList.add('is-hidden');
-
   const breedId = event.currentTarget.value;
-
   fetchCatByBreed(breedId)
     .then(data => {
       loaderEl.classList.replace('loader', 'is-hidden');
@@ -58,7 +54,6 @@ function createMarkUp(event) {
 function onFetchError() {
   selectEl.classList.remove('is-hidden');
   loaderEl.classList.replace('loader', 'is-hidden');
-
   Notify.failure(
     'Oops! Something went wrong! Try reloading the page or select another cat breed!'
   );
