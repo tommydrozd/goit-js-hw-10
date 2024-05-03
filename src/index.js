@@ -1,8 +1,8 @@
-import { fetchBreeds, fetchCatByBreed } from './js/cat-api';
+import { fetchBreeds, fetchCatByBreed } from './js/cat-api.js';
 import SlimSelect from 'slim-select';
 import 'slim-select/dist/slimselect.css';
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
-import { linksAPIObj } from './js/linksAPI';
+import { linksAPIObj } from './js/linksAPI.js';
 
 const select = new SlimSelect({
   select: '#single',
