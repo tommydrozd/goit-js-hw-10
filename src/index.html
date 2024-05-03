@@ -3,16 +3,20 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
     <title>Homework 10</title>
-    <link rel="stylesheet" href="./sass/index.scss" />
   </head>
   <body>
-    <div class="container">
-      <select class="breed-select" id="single"></select>
-      <p class="loader"></p>
-      <div class="cat-info"></div>
-    </div>
+    <div class="select-container">
+      <select class="breed-select is-hidden"></select>
 
-    <script src="./index.js" type="module"></script>
+      <p class="loader">Loading data, please wait...</p>
+      <p class="error is-hidden">
+        Oops! Something went wrong! Try reloading the page!
+      </p>
+    </div>
+    <div class="cat-info"></div>
+
+    <script src="index.js" type="module"></script>
   </body>
 </html>
